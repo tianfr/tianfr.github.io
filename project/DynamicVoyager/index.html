@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="DynamicVoyager creates unbounded dynamic scenes from a single view image or video.">
+  <meta name="keywords" content="Generative AI, Video Outpainting, Dynamic Scene Generation, 4D Generation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Voyaging into Unbounded Dynamic Scenes from a Single View</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/dynamicvoyager_icon2.jpg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://tianfr.github.io">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More 3D Vision Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://github.com/tianfr/MonoNeRF">
+            MonoNeRF
+          </a>
+          <a class="navbar-item" href="https://github.com/tianfr/Semantic-Flow">
+            Semantic Flow
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Voyaging into Unbounded Dynamic Scenes from a Single View</h1>
+          <div class="is-size-4 publication-authors">
+            <span class="author-block">
+              <a href="https://tianfr.github.io">Fengrui Tian</a>,</span>
+            <span class="author-block">
+              <a href="https://tianjiaoding.com/">Tianjiao Ding</a>,</span>
+            <span class="author-block">
+              <a href="https://peterljq.github.io/">Jinqi Luo</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://hanchmin.github.io/">Hancheng Min</a>,
+            </span>
+            <span class="author-block">
+              <a href="http://vision.jhu.edu/rvidal.html">René Vidal</a>,
+            </span>
+
+          </div>
+
+          <div class="is-size-4 publication-authors">
+            <span class="author-block">University of Pennsylvania</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/tianfr/DynamicVoyager"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (Coming Soon)</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/teaser.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
+        free-viewpoint
+        portraits.
+      </h2>
+    </div>
+  </div>
+</section> -->
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-rose">
+          <img src="./static/videos/rose.gif" alt="Animated GIF" style="height: 100%;" />
+        </div>
+        <div class="item item-vocano">
+          <video poster="" id="vocano" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/vocano.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-waterfall">
+          <video poster="" id="waterfall" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/waterfall.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-cat">
+          <img src="./static/videos/cat.gif" alt="Animated GIF" style="height: 100%;" />
+        </div>
+        <div class="item item-umbrella">
+            <img src="./static/videos/umbrella.gif" alt="Animated GIF" style="height: 100%;" />
+        </div>
+        <div class="item item-village">
+            <img src="./static/videos/village.gif" alt="Animated GIF" style="height: 100%;" />
+        </div>
+        <div class="item item-village">
+            <img src="./static/videos/cartoon.gif" alt="Animated GIF" style="height: 100%;" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- 第一行 -->
+    <div class="columns is-centered">
+      <div class="column has-text-centered">
+        <h3 class="title is-4">Input View</h3>
+        <figure class="image">
+          <img src="./static/images/rose_input.png" alt="Input View"
+            style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: transform 0.3s;">
+        </figure>
+      </div>
+      <div class="column has-text-centered">
+        <h3 class="title is-4">Output View</h3>
+        <figure class="image">
+          <img src="./static/images/rose_output.png" alt="Output View"
+            style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: transform 0.3s;">
+        </figure>
+      </div>
+      <div class="column has-text-centered">
+        <h3 class="title is-4">Scene Voyaging</h3>
+        <figure class="image">
+          <img src="./static/videos/rose.gif" alt="Scene Voyaging"
+            style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: transform 0.3s;">
+        </figure>
+      </div>
+    </div>
+
+    <!-- 第二行 -->
+    <div class="columns is-centered" style="margin-top: 20px;">
+      <div class="column has-text-centered">
+        <figure class="image">
+          <img src="./static/images/umbrella_input.png" alt="Input View"
+            style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: transform 0.3s;">
+        </figure>
+      </div>
+      <div class="column has-text-centered">
+        <figure class="image">
+          <img src="./static/images/umbrella_output.png" alt="Novel View"
+            style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: transform 0.3s;">
+        </figure>
+      </div>
+      <div class="column has-text-centered">
+        <figure class="image">
+          <img src="./static/videos/umbrella.gif" alt="Scene Voyaging"
+            style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: transform 0.3s;">
+        </figure>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-mobile is-variable is-3" style="align-items: flex-start;">
+
+      <!-- 第1个图片及标题 -->
+      <div class="column is-one-third" style="padding: 0 0.5rem;">
+        <h3 class="title is-4 has-text-centered" style="margin-bottom: 0.75rem;">Input View</h3>
+        <figure class="image" style="aspect-ratio: 1 / 1; margin: 0;">
+          <img src="./static/images/waterfall.png" alt="Input 1"
+               style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+        </figure>
+      </div>
+
+      <!-- 第2、3个视频共享一个标题 -->
+      <div class="column is-two-thirds" style="padding: 0 0.5rem;">
+        <h3 class="title is-4 has-text-centered" style="margin-bottom: 0.75rem;">Voyaging into Dynamic Scenes</h3>
+        <div class="columns is-mobile is-variable is-3" style="margin: 0;">
+          <div class="column" style="padding: 0;">
+            <figure class="image" style="aspect-ratio: 1 / 1; margin: 0;">
+              <video controls muted playsinline autoplay loop
+                     style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+                <source src="./static/videos/waterfall1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </figure>
+          </div>
+          <div class="column" style="padding: 0 0.5rem;">
+            <figure class="image" style="aspect-ratio: 1 / 1; margin: 0;">
+              <video controls muted playsinline autoplay loop
+                     style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+                <source src="./static/videos/waterfall2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 第二排，三张gif，标题同理，标题分配可以改 -->
+    <div class="columns is-mobile is-variable is-3" style="align-items: flex-start; margin-top: 2rem;">
+
+      <!-- 第1张gif及标题 -->
+      <div class="column is-one-third" style="padding: 0 0.5rem;">
+        <!-- <h3 class="title is-5 has-text-centered" style="margin-bottom: 0.75rem;">Example Gif 1</h3> -->
+        <figure class="image" style="aspect-ratio: 1 / 1; margin: 0;">
+          <img src="./static/images/cartoon.png" alt="Gif 1"
+               style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+        </figure>
+      </div>
+
+      <!-- 第2、3张gif共享标题 -->
+      <div class="column is-two-thirds" style="padding: 0 0.5rem;">
+        <!-- <h3 class="title is-5 has-text-centered" style="margin-bottom: 0.75rem;">Example Gifs 2 & 3</h3> -->
+        <div class="columns is-mobile is-variable is-3" style="margin: 0;">
+          <div class="column" style="padding: 0;">
+            <figure class="image">
+              <video controls muted playsinline autoplay loop
+                     style="width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+                <source src="./static/videos/cartoon1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </figure>
+          </div>
+          <div class="column" style="padding: 0 0.5rem;">
+            <figure class="image">
+              <video controls muted playsinline autoplay loop
+                     style="width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+                <source src="./static/videos/cartoon3.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+  <!-- 第二排，三张gif，标题同理，标题分配可以改 -->
+    <div class="columns is-mobile is-variable is-3" style="align-items: flex-start; margin-top: 2rem;">
+
+      <!-- 第1张gif及标题 -->
+      <div class="column is-one-third" style="padding: 0 0.5rem;">
+        <!-- <h3 class="title is-5 has-text-centered" style="margin-bottom: 0.75rem;">Example Gif 1</h3> -->
+        <figure class="image" style="aspect-ratio: 1 / 1; margin: 0;">
+          <img src="./static/images/village.png" alt="Gif 1"
+               style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+        </figure>
+      </div>
+
+      <!-- 第2、3张gif共享标题 -->
+      <div class="column is-two-thirds" style="padding: 0 0.5rem;">
+        <!-- <h3 class="title is-5 has-text-centered" style="margin-bottom: 0.75rem;">Example Gifs 2 & 3</h3> -->
+        <div class="columns is-mobile is-variable is-3" style="margin: 0;">
+          <div class="column" style="padding: 0;">
+            <figure class="image" style="aspect-ratio: 1 / 1; margin: 0;">
+              <img src="./static/videos/village1.gif" alt="Gif 1"
+                   style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+            </figure>
+          </div>
+          <div class="column" style="padding: 0 0.5rem;">
+            <figure class="image" style="aspect-ratio: 1 / 1; margin: 0;">
+              <img src="./static/videos/village2.gif" alt="Gif 2"
+                   style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+            </figure>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+<style>
+figure.image:hover img, 
+figure.image:hover video {
+  transform: none !important;
+}
+</style>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We study the problem of generating an unbounded dynamic scene from a single view.
+             Since the scene is changing over time, different generated views need to be consistent with the underlying 3D motions. 
+              We propose DynamicVoyager that reformulates the dynamic scene generation as a scene outpainting process for new dynamic content. 
+             As 2D outpainting models can hardly generate 3D consistent motions from only 2D pixels at a single view, we consider pixels as rays to enrich the pixel input with the ray context, so that the 3D motion consistency can be learned from the ray information. 
+             More specifically, we first map the single-view video input to a dynamic point cloud with the estimated video depths.
+             Then we render the partial video at a novel view and outpaint the video with ray contexts from the point cloud to generate 3D consistent motions. 
+             We employ the outpainted video to update the point cloud, which is used for scene outpainting from future novel views.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/DycfO7DTu98?si=kvGnvaDtjjd4c2S8"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/DycfO7DTu98?si=kvGnvaDtjjd4c2S8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre id="bibtex-text"><code>@InProceedings{25iccv/tian_dynvoyager,
+    author    = {Tian, Fengrui and Ding, Tianjiao and Luo, Jinqi and Min, Hancheng and Vidal, Ren\'e},
+    title     = {Voyaging into Unbounded Dynamic Scenes from a Single View},
+    booktitle = {Proceedings of the International Conference on Computer Vision (ICCV)},
+    month     = {October},
+    year      = {2025}
+}
+
+</code></pre>
+    <button onclick="copyBibTeX()" style="
+      margin-top: 12px;
+      padding: 10px 24px;
+      font-size: 1.1em;
+      background: #011F5B;
+      color: white;
+      border: none;
+      border-radius: 0cqh;
+      cursor: pointer;
+    ">Copy</button>
+    <span id="copy-msg" style="margin-left: 12px; color: green;"></span>
+  </div>
+</section>
+
+<script>
+function copyBibTeX() {
+  var text = document.getElementById("bibtex-text").innerText;
+  navigator.clipboard.writeText(text).then(function() {
+    var msg = document.getElementById("copy-msg");
+    msg.textContent = "Copied!";
+    setTimeout(() => msg.textContent = "", 2000);
+  });
+}
+</script>
+
+
+</body>
+</html>
