@@ -1,6 +1,6 @@
 @InProceedings{25iccv/tian_dynvoyager,
     author    = {Tian, Fengrui and Ding, Tianjiao and Luo, Jinqi and Min, Hancheng and Vidal, Ren\'e},
-    title     = {Voyaging into Unbounded Dynamic Scenes from a Single View},
+    title     = {Voyaging into Perpetual Dynamic Scenes from a Single View},
     booktitle = {Proceedings of the International Conference on Computer Vision (ICCV)},
     month     = {October},
     year      = {2025}
