@@ -1,407 +1,804 @@
-<!DOCTYPE HTML>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!DOCTYPE html>
+<html lang="en">
 
-  <title>Fengrui Tian 田豐瑞</title>
-  
-  <meta name="author" content="Fengrui Tian">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
-	<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>😉</text></svg>">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Fengrui Tian 田豐瑞</title>
+    <meta name="author" content="Fengrui Tian">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Fengrui Tian's academic homepage - PhD student at GRASP Lab, University of Pennsylvania">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>😉</text></svg>">
+    <style>
+        /* ===== Font Faces (same as original stylesheet.css) ===== */
+        /* latin-ext */
+        @font-face {
+            font-family: 'Lato';
+            font-style: italic;
+            font-weight: 400;
+            src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v15/S6u8w4BMUTPHjxsAUi-qNiXg7eU0.woff2) format('woff2');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        /* latin */
+        @font-face {
+            font-family: 'Lato';
+            font-style: italic;
+            font-weight: 400;
+            src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v15/S6u8w4BMUTPHjxsAXC-qNiXg7Q.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        /* latin-ext */
+        @font-face {
+            font-family: 'Lato';
+            font-style: italic;
+            font-weight: 700;
+            src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v15/S6u_w4BMUTPHjxsI5wq_FQftx9897sxZ.woff2) format('woff2');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        /* latin */
+        @font-face {
+            font-family: 'Lato';
+            font-style: italic;
+            font-weight: 700;
+            src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v15/S6u_w4BMUTPHjxsI5wq_Gwftx9897g.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        /* latin-ext */
+        @font-face {
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjxAwXiWtFCfQ7A.woff2) format('woff2');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        /* latin */
+        @font-face {
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjx4wXiWtFCc.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        /* latin-ext */
+        @font-face {
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: 700;
+            src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh6UVSwaPGQ3q5d0N7w.woff2) format('woff2');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        /* latin */
+        @font-face {
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: 700;
+            src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh6UVSwiPGQ3q5d0.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        /* ===== Reset & Base (matching original stylesheet.css exactly) ===== */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body,
+        td,
+        th,
+        tr,
+        p,
+        a {
+            font-family: 'Lato', Verdana, Helvetica, sans-serif;
+            font-size: 15px;
+        }
+
+        strong {
+            font-family: 'Lato', Verdana, Helvetica, sans-serif;
+            font-size: 15px;
+        }
+
+        body {
+            color: #333;
+            background-color: #fff;
+        }
+
+        a {
+            color: #1772d0;
+            text-decoration: none;
+        }
+
+        a:focus,
+        a:hover {
+            color: #f09228;
+            text-decoration: none;
+        }
+
+        /* ===== Layout Container ===== */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* ===== Header / Bio Section (matching original table proportions) ===== */
+        .header-section {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .bio-content {
+            flex: 1;
+            min-width: 0;
+            padding: 2.5% 2.5% 2.5% 0;
+        }
+
+        .profile-photo {
+            flex-shrink: 0;
+            width: 38%;
+            max-width: 38%;
+            padding: 2.5%;
+        }
+
+        .profile-photo a img {
+            width: 125%;
+            max-width: 125%;
+            height: auto;
+            display: block;
+        }
+
+        .name-title {
+            text-align: center;
+            margin-bottom: 16px;
+        }
+
+        .name-title .name-en {
+            font-family: 'Lato', Verdana, Helvetica, sans-serif;
+            font-size: 34px;
+        }
+
+        .name-title .name-cn {
+            font-family: KaiTi, serif;
+            font-size: 32px;
+            margin-left: 8px;
+        }
+
+        .bio-content p {
+            margin-bottom: 10px;
+        }
+
+        .links-bar {
+            text-align: center;
+            margin-top: 12px;
+            white-space: nowrap;
+        }
+
+
+
+        /* ===== Section Headings (matching original <heading> element) ===== */
+        .section-heading {
+            font-family: 'Lato', Verdana, Helvetica, sans-serif;
+            font-size: 24px;
+            font-weight: 400;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        /* ===== Publications Section ===== */
+        .publication-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .pub-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 10px 0;
+        }
+
+        .pub-thumb {
+            flex-shrink: 0;
+            width: 220px;
+        }
+
+        .pub-thumb img {
+            width: 220px;
+            height: 110px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .pub-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        /* matching original <papertitle> element */
+        .pub-title {
+            font-family: 'Lato', Verdana, Helvetica, sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        .pub-authors,
+        .pub-venue,
+        .pub-links {
+            margin-top: 4px;
+        }
+
+        .pub-venue em {
+            font-style: italic;
+        }
+
+        .pub-desc {
+            margin-top: 8px;
+        }
+
+        /* ===== Service / Honors / Misc Lists (matching original line-height:20px) ===== */
+        .list-section {
+            padding: 0 20px;
+            line-height: 20px;
+        }
+
+        .list-section p {
+            margin-bottom: 8px;
+        }
+
+        .list-section ul {
+            list-style: disc;
+            padding-left: 20px;
+            margin: 8px 0;
+        }
+
+        .list-section li {
+            margin-bottom: 4px;
+        }
+
+        .list-section .sub-heading {
+            font-weight: 700;
+            margin-top: 16px;
+            margin-bottom: 8px;
+        }
+
+        .list-section .sub-heading:first-child {
+            margin-top: 0;
+        }
+
+        /* ===== Visitor Map ===== */
+        .visitor-map {
+            text-align: right;
+            margin-top: 40px;
+            padding: 0;
+        }
+
+        /* ===== Footer ===== */
+        .footer {
+            text-align: right;
+            font-size: small;
+            margin-top: 20px;
+            padding-bottom: 20px;
+            color: #666;
+        }
+
+        /* ===== Highlight ===== */
+        span.highlight {
+            background-color: #ffffd0;
+        }
+
+        /* ============================================
+       RESPONSIVE: Tablets & Small Screens
+       ============================================ */
+        @media screen and (max-width: 768px) {
+
+            html,
+            body {
+                overflow-x: hidden;
+            }
+
+            .container {
+                padding: 16px;
+            }
+
+            .header-section {
+                flex-direction: column-reverse;
+                align-items: center;
+                padding: 16px 0;
+            }
+
+            .bio-content {
+                text-align: left;
+                padding: 0;
+            }
+
+            .links-bar {
+                white-space: normal;
+            }
+
+            .profile-photo {
+                width: 50%;
+                max-width: 250px;
+                padding-left: 0;
+                margin-bottom: 16px;
+            }
+
+            .profile-photo a img {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .name-title {
+                text-align: center;
+            }
+
+            .name-title .name-en {
+                font-size: 28px;
+            }
+
+            .name-title .name-cn {
+                font-size: 28px;
+            }
+
+            .section-heading {
+                font-size: 22px;
+                margin-top: 32px;
+                margin-bottom: 16px;
+            }
+
+            .pub-item {
+                flex-direction: column;
+                align-items: center;
+                padding: 8px 0;
+            }
+
+            .pub-thumb {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .pub-thumb img {
+                width: 100%;
+                height: auto;
+            }
+
+            .pub-info {
+                width: 100%;
+            }
+
+            .list-section {
+                padding: 0 10px;
+            }
+
+            .visitor-map {
+                margin-top: 32px;
+                text-align: center;
+            }
+
+            .footer {
+                text-align: center;
+            }
+        }
+
+        /* ============================================
+       RESPONSIVE: Small Mobile
+       ============================================ */
+        @media screen and (max-width: 480px) {
+
+            .container {
+                padding: 12px;
+            }
+
+            .header-section {
+                padding: 12px 0;
+            }
+
+            .name-title .name-en {
+                font-size: 24px;
+            }
+
+            .name-title .name-cn {
+                font-size: 24px;
+            }
+
+            .profile-photo {
+                width: 55%;
+                max-width: 200px;
+            }
+
+            .section-heading {
+                font-size: 20px;
+                margin-top: 28px;
+                margin-bottom: 14px;
+            }
+
+            .links-bar {
+                font-size: 13px;
+            }
+
+            .pub-thumb {
+                max-width: 260px;
+            }
+
+            .visitor-map {
+                text-align: center;
+                margin-top: 28px;
+            }
+
+            .footer {
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 
 <body>
-  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-    <tr style="padding:0px">
-      <td style="padding:0px">
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr style="padding:0px">
-            <td style="padding:2.5%;width:63%;vertical-align:middle">
-              <p style="text-align:center">
-                <name>
-                  Fengrui Tian &nbsp  
-                  <font face="KaiTi" size="6">田豐瑞</font>
-                </name>
-              </p>
-              <p>I'm a <s>first</s> second-year Ph.D. student at <a href="https://www.grasp.upenn.edu/">GRASP Lab</a>, <a href="https://www.upenn.edu/">University of Pennsylvania</a>, advised by <a href="http://vision.jhu.edu/rvidal.html">Prof. Ren&eacute; Vidal</a>. I have a broad research interest in computer vision and graphics. Now I'm focusing on space generation.</p>
-                
-              <p>I previously was a research intern at <a href="https://www.tsinghua.edu.cn/">Tsinghua University</a>, 
-              where I was very fortunate to work with <a href="https://duanyueqi.github.io/">Prof. Yueqi Duan</a> and focused on novel view synthesis. 
-              </p>
-              <p> I received my M.Eng. degree from the the <a href="http://iair.xjtu.edu.cn/">College of Artificial Intelligence</a> of <a href="http://www.xjtu.edu.cn/">Xi'an Jiaotong University</a>, under the supervision of <a href="https://gr.xjtu.edu.cn/en/web/dushaoyi/home">Prof. Shaoyi Du</a>, with the general ranking 1/107+ and the honor of Best Master's Thesis. I received my B.Eng. degree from  the <a href="https://blog.google/products/google-ar-vr/introducing-next-generation-jump/">School of Software Engineering</a> of <a href="http://www.xjtu.edu.cn/">Xi'an Jiaotong University</a>, supervised by <a href="https://gr.xjtu.edu.cn/en/web/zhiqiangtian/home">Prof. Zhiqiang Tian</a>, with the honor of Best Bachelor's Thesis (1/110+).
-              </p>
-              <p>
-                Previously, I had some great internships at <a href="https://ccvl.jhu.edu/">CCVL group</a> of <a href="https://www.jhu.edu/">Johns Hopkins University</a>, <a href="https://www.shlab.org.cn/">Shanghai Artificial Intelligence Laboratory</a>, <a href="https://www.sensetime.com/">Sensetime Research</a> and <a href="https://www.megvii.com/">Megvii Research</a>. 
-                <!-- advised by <a href="https://www.cs.jhu.edu/~ayuille/index.html">Prof. Alan Yuille</a> and <a href="https://angtianwang.github.io/">Angtian Wang</a>. -->
-              <p>
-                I support <a href="http://slow-science.org/">Slow Science</a> but it is really hard for me to practice it now.
-              </p>
-              <!-- <p>  I'm looking for Ph.D. positions in computer vision in Fall 2024. If you are interested in my background and have some available positions, please let me know. 
-              </p> -->
-              <p style="text-align:center">
-                <a href="mailto:tianfr1999@gmail.com">Email</a> &nbsp/&nbsp
-                <!-- <a href="data/JonBarron-CV.pdf">CV</a> &nbsp/&nbsp -->
-                <!-- <a href="data/JonBarron-bio.txt">Bio</a> &nbsp/&nbsp -->
-                <a href="https://scholar.google.com/citations?hl=en&user=jQ5a6axA_XEC">Google Scholar</a> &nbsp/&nbsp
-                <!-- <a href="https://twitter.com/jon_barron">Twitter</a> &nbsp/&nbsp -->
-                <a href="https://github.com/tianfr/">Github</a> &nbsp/&nbsp
-                <!-- <a href="https://orcid.org/0000-0002-9577-5276">ORCID</a> &nbsp/&nbsp -->
-                <a href="data/CV_Fengrui_Tian_latest.pdf">Full CV (2025.9.16)</a> &nbsp/&nbsp
-                <a href="data/CV_of_Failure.pdf">CV of Failure </a>
+    <div class="container">
 
-              </p>
-            </td>
-            <!-- <td style="padding:2.5%;width:25%;max-width:25%">
-              <a href="images/Fengrui_Tian_avatar.jpg"><img style="width:100%;max-width:100%" alt="profile photo" src="images/Fengrui_Tian_avatar.jpg" class="hoverZoomLink"></a>
-            </td> -->
-            <td style="padding:2.5%;width:50%;max-width:50%">
-              <a href="images\Fengrui_Tian_2026.2_Apple_Scholar.jpg"><img style="width:125%;max-width:125%" alt="profile photo" src="images\Fengrui_Tian_2026.2_Apple_Scholar_maggie.jpg" class="hoverZoomLink"></a>
-            </td>
-          </tr>
-        <!-- </tbody></table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-            <td style="padding:20px;width:100%;vertical-align:middle">
-              <heading>Research</heading>
-              <p>
-                I'm interested in computer vision, machine learning, optimization, and image processing. Much of my research is about inferring the physical world (shape, motion, color, light, etc) from images. Representative papers are <span class="highlight">highlighted</span>.
-              </p>
-            </td>
-          </tr>
-        </tbody></table> -->
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
-          <br>    <br> 
-          <tr>
-            <td>
-              <heading>Selected Publications</heading>
-            </td>
-          </tr>
-        </tbody></table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          
-          <tr onmouseout="dreamfusion_stop()" onmouseover="dreamfusion_start()">
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="images/dynamicvoyager_teaser.gif" alt="prl" width="220" height="110">
-            </td>
-            <td width="75%" valign="middle">
-              <a href="">
-                <papertitle>Voyaging into Perpetual Dynamic Scenes from a Single View</papertitle>
-              </a>
-              <br>
-              <strong>Fengrui Tian</strong>,
-              <a href="https://tianjiaoding.com/">Tianjiao Ding</a>,
-              <a href="https://peterljq.github.io/">Jinqi Luo</a>,
-              <a href="https://hanchmin.github.io/">Hancheng Min</a>,
-              <a href="http://vision.jhu.edu/rvidal.html">Ren&eacute; Vidal</a>
-              <br>
-              <em>ICCV</em>, 2025
-              <br>
-              <a href="https://arxiv.org/abs/2507.04183">arxiv</a>  &nbsp/&nbsp 
-              <a href="paper\Tian_DynamicVoyager_ICCV_2025.pdf">paper</a>  &nbsp/&nbsp 
-              <a href="https://tianfr.github.io/project/DynamicVoyager/index.html">website</a>  &nbsp/&nbsp 
-              <a href="https://github.com/tianfr/DynamicVoyager">code</a>  &nbsp/&nbsp 
-              <a href="https://www.youtube.com/watch?v=g9CfJsgfj1c">video</a>  &nbsp/&nbsp 
-              <a href="data\ICCV25DynamicVoyager.txt">bibtex</a>
-              <p> </p>
-              <p> </p>
-              <p>
-               
-                &nbsp
-              </p>
-            </td>
-          </tr>
+        <!-- ===== HEADER / BIO ===== -->
+        <section class="header-section">
+            <div class="bio-content">
+                <div class="name-title">
+                    <span class="name-en">Fengrui Tian</span>
+                    &nbsp;
+                    <span class="name-cn">田豐瑞</span>
+                </div>
 
-          <tr onmouseout="dreamfusion_stop()" onmouseover="dreamfusion_start()">
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="images/pose_estimator_wo_pose_overview.png" alt="prl" width="220" height="110">
-            </td>
-            <td width="75%" valign="middle">
-              <a href="">
-                <papertitle>Learning a Category-level Pose Estimator without Pose Annotations</papertitle>
-              </a>
-              <br>
-              <strong>Fengrui Tian</strong>,
-              <a href="https://www.cs.jhu.edu/~yyliu/">Yaoyao Liu</a>,
-              <a href="https://www.cs.jhu.edu/~ayuille/">Alan Yuille</a>,
-              <a href="https://gvrl.mpi-inf.mpg.de/">Adam Kortylewski</a>,
-              <a href="https://duanyueqi.github.io/">Yueqi Duan</a>,
-              <a href="https://gr.xjtu.edu.cn/en/web/dushaoyi/home">Shaoyi Du</a>,
-              <a href="https://scholar.google.com/citations?user=YR7re-cAAAAJ&hl=zh-CN">Angtian Wang</a>
-              <br>
-              <em>Arxiv</em>, 2024
-              <br>
-               <a href="https://arxiv.org/abs/2404.05626">arxiv</a>  &nbsp<!--/&nbsp  -->
-              <!-- <a href="data/iclr24SemanticFlow.bib">bibtex</a> -->
-              <p></p>
-              <p>
-              We propose to leverage the power of diffusion model to train a category-level pose estimator without requiring any pose annotations. 
-              </p>
-            </td>
-          </tr>
+                <p>I'm a <s>first</s> second-year Ph.D. student at <a href="https://www.grasp.upenn.edu/">GRASP Lab</a>,
+                    <a href="https://www.upenn.edu/">University of Pennsylvania</a>, advised by <a
+                        href="http://vision.jhu.edu/rvidal.html">Prof. Ren&eacute; Vidal</a>. I have a broad research
+                    interest in computer vision and graphics. Now I'm focusing on space generation.
+                </p>
 
-          <tr onmouseout="dreamfusion_stop()" onmouseover="dreamfusion_start()">
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="images/semantic_flow_teaser.png" alt="prl" width="220" height="110">
-            </td>
-            <td width="75%" valign="middle">
-              <a href="">
-                <papertitle>Semantic Flow: Learning Semantic Fields of Dynamic Scenes from Monocular Videos</papertitle>
-              </a>
-              <br>
-              <strong>Fengrui Tian</strong>,
-              <a href="https://duanyueqi.github.io/">Yueqi Duan</a>,
-              <a href="https://scholar.google.com/citations?user=YR7re-cAAAAJ&hl=zh-CN">Angtian Wang</a>,
-              <a href="https://ventusff.github.io/">Jianfei Guo</a>,
-              <a href="https://gr.xjtu.edu.cn/en/web/dushaoyi/home">Shaoyi Du</a>
-              <br>
-              <em>ICLR</em>, 2024
-              <br>
-              <a href="https://openreview.net/forum?id=A2mRcRyGdl">open review</a>  &nbsp/&nbsp 
-              <a href="https://arxiv.org/abs/2404.05163">arxiv</a>  &nbsp/&nbsp 
-              <a href="https://github.com/tianfr/Semantic-Flow">code</a>  &nbsp/&nbsp 
-              <a href="data/iclr24SemanticFlow.txt">bibtex</a>
-              <p></p>
-              <p>
-              We propose Semantic Flow that builds semantic fields of dynamic scenes from monocular videos. 
-              </p>
-            </td>
-          </tr>
+                <p>I previously was a research intern at <a href="https://www.tsinghua.edu.cn/">Tsinghua University</a>,
+                    where I was very fortunate to work with <a href="https://duanyueqi.github.io/">Prof. Yueqi Duan</a>
+                    and focused on novel view synthesis.</p>
 
-          <tr onmouseout="dreamfusion_stop()" onmouseover="dreamfusion_start()">
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="images/mononerf_teaser.png" alt="prl" width="220" height="110">
-            </td>
-            <!-- <td style="padding:20px;width:25%;vertical-align:middle">
-              <div class="one">
-                <div class="two" id='dreamfusion_image'><video  width=100% height=100% muted autoplay loop>
-                <source src="images/dreamfusion.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-                </video></div>
-                <img src='images/tcvm_overview.jpg' width="160">
-              </div>
-              <script type="text/javascript">
-                function dreamfusion_start() {
-                  document.getElementById('dreamfusion_image').style.opacity = "1";
-                }
+                <p>I received my M.Eng. degree from the <a href="http://iair.xjtu.edu.cn/">College of Artificial
+                        Intelligence</a> of <a href="http://www.xjtu.edu.cn/">Xi'an Jiaotong University</a>, under the
+                    supervision of <a href="https://gr.xjtu.edu.cn/en/web/dushaoyi/home">Prof. Shaoyi Du</a>, with the
+                    general ranking 1/107+ and the honor of Best Master's Thesis. I received my B.Eng. degree from the
+                    <a href="https://blog.google/products/google-ar-vr/introducing-next-generation-jump/">School of
+                        Software Engineering</a> of <a href="http://www.xjtu.edu.cn/">Xi'an Jiaotong University</a>,
+                    supervised by <a href="https://gr.xjtu.edu.cn/en/web/zhiqiangtian/home">Prof. Zhiqiang Tian</a>,
+                    with the honor of Best Bachelor's Thesis (1/110+).
+                </p>
 
-                function dreamfusion_stop() {
-                  document.getElementById('dreamfusion_image').style.opacity = "0";
-                }
-                dreamfusion_stop()
-              </script>
-            </td> -->
-            <!-- <td style="padding:20px;width:75%;vertical-align:middle"> -->
-            <td width="75%" valign="middle">
-              <a href="paper/Tian_MonoNeRF_arxiv.pdf">
-                <papertitle>MonoNeRF: Learning a Generalizable Dynamic Radiance Field from Monocular Videos</papertitle>
-              </a>
-              <br>
-              <strong>Fengrui Tian</strong>,
-              <a href="https://gr.xjtu.edu.cn/en/web/dushaoyi/home">Shaoyi Du</a>,
-              <a href="https://duanyueqi.github.io/">Yueqi Duan</a>
-              <br>
-              <em>ICCV</em>, 2023 
-              <!-- &nbsp <font color="red">(Oral Presentation, <strong>Best Paper Award Honorable Mention</strong>)</font> -->
-              <br>
-              <a href="paper/Tian_MonoNeRF_arxiv.pdf">pdf</a> &nbsp/&nbsp 
-              <a href="https://arxiv.org/abs/2212.13056">arxiv</a> &nbsp/&nbsp
-              <a href="data/iccv23_MonoNeRF_poster.pdf">poster</a> &nbsp/&nbsp
-              <a href="https://github.com/tianfr/MonoNeRF">code</a> &nbsp/&nbsp
-              <a href="https://www.youtube.com/watch?v=A6O4Q3PZZ18">youtube video</a> &nbsp/&nbsp
-              <a href="https://livejohnshopkins-my.sharepoint.com/:v:/g/personal/zzhou82_jh_edu/ERr1M3Ze8kFNn85fCdIOEC4BZgu8AOWavzqBSJ2ywTD67A?e=zVChTK">talk at CCVL</a> &nbsp/&nbsp
-              <a href="data/iccv23MonoNeRF.txt">bibtex</a>
-              <p></p>
-              <p>
-              We propose MonoNeRF for learning a generalizable dynamic radiance field from monocular videos. While independently using 2D local features and
-              optical flows suffers from ambiguity along the ray direction, they provide complementary constraints to jointly learn 3D
-              point features and scene flows.
-              </p>
-            </td>
-          </tr>
+                <p>Previously, I had some great internships at <a href="https://ccvl.jhu.edu/">CCVL group</a> of <a
+                        href="https://www.jhu.edu/">Johns Hopkins University</a>, <a
+                        href="https://www.shlab.org.cn/">Shanghai Artificial Intelligence Laboratory</a>, <a
+                        href="https://www.sensetime.com/">Sensetime Research</a> and <a
+                        href="https://www.megvii.com/">Megvii Research</a>.</p>
 
-          <tr onmouseout="dreamfusion_stop()" onmouseover="dreamfusion_start()">
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="images/tcvm_overview.jpg" alt="prl" width="220" height="110">
-            </td>
-            <!-- <td style="padding:20px;width:25%;vertical-align:middle">
-              <div class="one">
-                <div class="two" id='dreamfusion_image'><video  width=100% height=100% muted autoplay loop>
-                <source src="images/dreamfusion.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-                </video></div>
-                <img src='images/tcvm_overview.jpg' width="160">
-              </div>
-              <script type="text/javascript">
-                function dreamfusion_start() {
-                  document.getElementById('dreamfusion_image').style.opacity = "1";
-                }
+                <p>I support <a href="http://slow-science.org/">Slow Science</a> but it is really hard for me to
+                    practice it now.</p>
 
-                function dreamfusion_stop() {
-                  document.getElementById('dreamfusion_image').style.opacity = "0";
-                }
-                dreamfusion_stop()
-              </script>
-            </td> -->
-            <!-- <td style="padding:20px;width:75%;vertical-align:middle"> -->
-            <td width="75%" valign="middle">
-              <a href="https://openaccess.thecvf.com/content/ACCV2022/html/Tian_TCVM_Temporal_Contrasting_Video_Montage_Framework_for_Self-supervised_Video_Representation_ACCV_2022_paper.html">
-                <papertitle>TCVM: Temporal Contrasting Video Montage Framework for Self-supervised Video Representation Learning</papertitle>
-              </a>
-              <br>
-              <strong>Fengrui Tian</strong>,
-              Jiawei Fan,
-              Xie Yu,
-              <a href="https://gr.xjtu.edu.cn/en/web/dushaoyi/home">Shaoyi Du</a>,
-              Meina Song,
-              Yu Zhao
-              <br>
-              <em>ACCV</em>, 2022 &nbsp <font color="red">(Oral Presentation, <strong>Best Paper Award Honorable Mention</strong>)</font>
-              <br>
-              <a href="paper/Tian_TCVM_Temporal_Contrasting_Video_Montage_Framework_for_Self-supervised_Video_Representation_ACCV_2022_paper.pdf">pdf</a>  &nbsp/&nbsp
-              <a href="data/accv22TCVM.txt">bibtex</a>
-              <p></p>
-              <p>
-              We propose a framework for self-supervised video contrastive learning.
-              </p>
-            </td>
-          </tr>
-		  
+                <div class="links-bar">
+                    <a href="mailto:tianfr1999@gmail.com">Email</a> &nbsp;/&nbsp;
+                    <a href="https://scholar.google.com/citations?hl=en&user=jQ5a6axA_XEC">Google Scholar</a>
+                    &nbsp;/&nbsp;
+                    <a href="https://github.com/tianfr/">Github</a> &nbsp;/&nbsp;
+                    <a href="data/CV_Fengrui_Tian_latest.pdf">Full CV (2025.9.16)</a> &nbsp;/&nbsp;
+                    <a href="data/CV_of_Failure.pdf">CV of Failure</a>
+                </div>
+            </div>
 
-          <tr>
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="images/surfacegcn.jpg" alt="prl" width="220" height="110">
-            </td>
-            <td width="75%" valign="middle">
-              <a href="https://aapm.onlinelibrary.wiley.com/doi/abs/10.1002/mp.16280">
-                <papertitle>Surface-GCN: Learning Interaction Experience for Organ Segmentation in 3D Medical Images</papertitle>
-              </a>
-              <br>
-              <strong>Fengrui Tian</strong>, 
-              <a href="https://gr.xjtu.edu.cn/en/web/zhiqiangtian/home">Zhiqiang Tian</a>,
-              Zhang Chen,
-              Dong Zhang,
-              <a href="https://gr.xjtu.edu.cn/en/web/dushaoyi/home">Shaoyi Du</a>
-              <br>
-              <em><a href="https://aapm.onlinelibrary.wiley.com/journal/24734209">Medical Physics</a></em>, 2023 &nbsp (IF: 4.071)
-              <br>
-              <a href="https://onlinelibrary.wiley.com/share/author/WQ4CIMTNAPDTNDRKVFJK?target=10.1002/mp.16280">paper</a>   &nbsp/&nbsp
-              <a href="paper/Tian_Surface-GCN_MP_2023_preprint.pdf">pdf</a>   &nbsp/&nbsp
-              <a href="paper/Tian_Surface-GCN_MP_2023_supplementary_material.pdf">supplementary material</a>   &nbsp/&nbsp
-              <a href="data/mp23Surface-GCN.txt">bibtex</a>
-              <p>We propose a framework for learning radiologists' experience in medical organ segmentation.</p>
-            </td>
-          </tr>
+            <div class="profile-photo">
+                <a href="images/Fengrui_Tian_2026.2_Apple_Scholar.jpg">
+                    <img alt="profile photo" src="images/Fengrui_Tian_2026.2_Apple_Scholar_maggie.jpg">
+                </a>
+            </div>
+        </section>
 
-        </tbody></table>
+        <!-- ===== SELECTED PUBLICATIONS ===== -->
+        <h2 class="section-heading">Selected Publications</h2>
 
-        <br>  <br>
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
-          <tr style="padding:0px">
-            <td>
-              <heading>Academic Services</heading>
-            </td>
-          </tr>
-        </tbody></table>
-        <table width="100%" align="center" border="0" cellpadding="20"><tbody style="padding:20px">
-          <tr >
-            <td style="padding:0px 20px;width:100%;vertical-align:middle;line-height:20px;">
-              <strong>Conference Reviewer</strong> 
-              <li> IEEE / CVF Computer Vision and Pattern Recognition Conference (CVPR) <a href="https://cvpr2023.thecvf.com/Conferences/2023">2023</a>, <a href="https://cvpr.thecvf.com/Conferences/2024">2024</a>, <a href="https://cvpr.thecvf.com/Conferences/2025">2025</a>, <a href="https://cvpr.thecvf.com/Conferences/2026">2026</a></li> 
-              <li> IEEE / CVF International Conference on Computer Vision (ICCV) <a href="https://iccv.thecvf.com/Conferences/2025">2025</a></li> 
-              <li> ACM Multimedia (ACM MM) <a href="https://2024.acmmm.org/">2024</a>, <a href="https://acmmm2025.org/">2025</a></li> 
-              <li> Neural Information Processing Systems (NIPS) <a href="https://neurips.cc/Conferences/2024">2024</a>, <a href="https://neurips.cc/Conferences/2025">2025</a></li>
-              <li> International Conference on Learning Representations (ICLR) <a href="https://iclr.cc/Conferences/2025">2025</a>, <a href="https://iclr.cc/Conferences/2025">2026</a></li>
-              <li> International Conference on Machine Learning (ICML) <a href="https://icml.cc/Conferences/2025">2025 </a></li>
-              <li> The IEEE/CVF Winter Conference on Applications of Computer Vision (WACV) <a href="https://wacv.thecvf.com/">2026 </a></li>
-              <li> IEEE International Conference on Multimedia & Expo (ICME) <a href="https://2025.ieeeicme.org/">2025 </a></li>
-              <li> Chinese Conference on Pattern Recognition and Computer Vision (PRCV) <a href="http://www.prcv.cn/">2024</a>, <a href="http://www.prcv.cn/">2025</a></li>
-              <li> International Conference on Artificial Intelligence and Statistics (AISTATS) <a href="https://aistats.org/aistats2025/">2025</a>, <a href="https://aistats.org/aistats2026/">2026 </a></li>
-              <br>
-              <strong>Journal Reviewer</strong> 
-              <li > <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=76">IEEE Transactions on Circuits and Systems for Video Technology (TCSVT) </a> </li> 
-              <li > <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=2945">IEEE Transactions on Visualization and Computer Graphics (TVCG) </a> </li> 
-              <li > <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=6046">IEEE Transactions on Multimedia (TMM)</a> </li>
-              <li > <a href="https://dl.acm.org/journal/tog">ACM Transactions on Graphics (ToG)</a> </li>
-              <li > <a href="https://link.springer.com/journal/11263">International Journal of Computer Vision (IJCV)</a> </li>
-          </td>
-            
-          </tr>
-        </tbody></table>
-        <br>
-        <br>
-        <!-- <br> -->
+        <div class="publication-list">
 
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
-          <tr style="padding:0px">
-            <td>
-              <heading>Honors</heading>
-            </td>
-          </tr>
-        </tbody></table>
-        <table width="100%" align="center" border="0" cellpadding="20"><tbody style="padding:20px">
-          <tr >
-            <td style="padding:0px 20px;width:100%;vertical-align:middle;line-height:20px;">
-              <li><strong>ACCV Best Paper Award Honorable Mention (2/278)</strong>,&nbsp; 2022 </li> 
-              <li>Top 15 Postgraduates Honorable Mention, Xi'an Jiaotong University <strong>(Top 0.1%)</strong>,&nbsp; 2023 </li> 
-              <li>National Scholarship, Xi'an Jiaotong University <strong>(Top 0.1%)</strong>,&nbsp; 2023 </li> 
-              <li>Xiaomi Special Scholarship, Xiaomi Corp. <strong>(Top 0.1%)</strong>,&nbsp; 2023 </li> 
-              <li>Special Scholarship, Xi'an Jiaotong University (Top 10%),&nbsp; 2022 </li> 
-              <li>Best Bachelor's Thesis, Xi'an Jiaotong University (ranking 1/110+),&nbsp; 2021 </li>
-              <li>Best Master's Thesis, Xi'an Jiaotong University (ranking 1/107+),&nbsp; 2024 </li> <br>
-          </td>
-            
-          </tr>
-          
-					
-        </tbody></table>
+            <!-- Publication 1: DynamicVoyager -->
+            <div class="pub-item">
+                <div class="pub-thumb">
+                    <img src="images/dynamicvoyager_teaser.gif" alt="DynamicVoyager teaser">
+                </div>
+                <div class="pub-info">
+                    <a href=""><span class="pub-title">Voyaging into Perpetual Dynamic Scenes from a Single
+                            View</span></a>
+                    <div class="pub-authors">
+                        <strong>Fengrui Tian</strong>,
+                        <a href="https://tianjiaoding.com/">Tianjiao Ding</a>,
+                        <a href="https://peterljq.github.io/">Jinqi Luo</a>,
+                        <a href="https://hanchmin.github.io/">Hancheng Min</a>,
+                        <a href="http://vision.jhu.edu/rvidal.html">Ren&eacute; Vidal</a>
+                    </div>
+                    <div class="pub-venue"><em>ICCV</em>, 2025</div>
+                    <div class="pub-links">
+                        <a href="https://arxiv.org/abs/2507.04183">arxiv</a> &nbsp;/&nbsp;
+                        <a href="paper/Tian_DynamicVoyager_ICCV_2025.pdf">paper</a> &nbsp;/&nbsp;
+                        <a href="https://tianfr.github.io/project/DynamicVoyager/index.html">website</a> &nbsp;/&nbsp;
+                        <a href="https://github.com/tianfr/DynamicVoyager">code</a> &nbsp;/&nbsp;
+                        <a href="https://www.youtube.com/watch?v=g9CfJsgfj1c">video</a> &nbsp;/&nbsp;
+                        <a href="data/ICCV25DynamicVoyager.txt">bibtex</a>
+                    </div>
+                </div>
+            </div>
 
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
-          <tr style="padding:0px">
-            <td>
-              <heading>Misc</heading>
-            </td>
-          </tr>
-        </tbody></table>
-        <table width="100%" align="center" border="0" cellpadding="20"><tbody style="padding:20px">
-          <tr >
-            <td style="padding:0px 20px;width:100%;vertical-align:middle;line-height:20px;">
-              I am a <Strong>badminton player</Strong>. I played badminton at UPenn, XJTU, Tsinghua University, SenseTime Corp., and JHU. 
-              <br>
-              Here are several awards I have won:
-              <li>Quarter Final of Badminton Men's Single Contest, SenseTime Corp.&nbsp; 2023 </li> 
-              <li>Semi Final of Freshman Cup Badminton, Faculty of Electronic and Information Engineering, XJTU,&nbsp; 2022 </li> 
-              Don't hesitate to <a href="mailto:tianfr1999@gmail.com">contact me</a> if you want to play badminton with me!
-              <br>
-              <br>
-              I spent a wonderful time on the <Strong>Model United Nations</Strong> activities with my closest friends during my undergraduate study.
-              I appreciate and never forget those memories.
-            </td>
-            
-          </tr>
-          
-					
-        </tbody></table>
-        
-        <table width="30%" align="right" border="0"  cellspacing="0" cellpadding="0"><tbody style="padding:0px;text-align:right"><tbody>
-          <tr >
-            <td style="padding:40px 0px 0px;width:100%;vertical-align:middle;line-height:0px;">
-          <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=080808&w=300&t=tt&d=WXVqg2kYGsIY5G4MjqSGNYKVJI2nQs-7CMQylmE1UG8&co=ffffff&ct=808080&cmo=3acc3a&cmn=ff5353'></script> 
-          <!-- <a href='https://clustrmaps.com/site/1bzfd'  title='Visit tracker'><img src='http//clustrmaps.com/map_v2.png?cl=ffffff&w=a&t=n&d=WXVqg2kYGsIY5G4MjqSGNYKVJI2nQs-7CMQylmE1UG8'/></a> -->
-            </td>
-          </tbody></table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr>
-            <td style="padding:0px">
-              <!-- <br> -->
-              <p style="text-align:right;font-size:small;">
-                Last update: 09/16/2025. The website template was borrowed from the <a href="https://github.com/jonbarron/website">source code</a> and <a href="https://jonbarron.info/"> this page</a>.
-              </p>
-            </td>
-          </tr>
-        </tbody></table>
-      </td>
-    </tr>
-  </table>
+            <!-- Publication 2: Pose Estimator without Pose -->
+            <div class="pub-item">
+                <div class="pub-thumb">
+                    <img src="images/pose_estimator_wo_pose_overview.png" alt="Pose Estimator overview">
+                </div>
+                <div class="pub-info">
+                    <a href=""><span class="pub-title">Learning a Category-level Pose Estimator without Pose
+                            Annotations</span></a>
+                    <div class="pub-authors">
+                        <strong>Fengrui Tian</strong>,
+                        <a href="https://www.cs.jhu.edu/~yyliu/">Yaoyao Liu</a>,
+                        <a href="https://www.cs.jhu.edu/~ayuille/">Alan Yuille</a>,
+                        <a href="https://gvrl.mpi-inf.mpg.de/">Adam Kortylewski</a>,
+                        <a href="https://duanyueqi.github.io/">Yueqi Duan</a>,
+                        <a href="https://gr.xjtu.edu.cn/en/web/dushaoyi/home">Shaoyi Du</a>,
+                        <a href="https://scholar.google.com/citations?user=YR7re-cAAAAJ&hl=zh-CN">Angtian Wang</a>
+                    </div>
+                    <div class="pub-venue"><em>Arxiv</em>, 2024</div>
+                    <div class="pub-links">
+                        <a href="https://arxiv.org/abs/2404.05626">arxiv</a>
+                    </div>
+                    <p class="pub-desc">We propose to leverage the power of diffusion model to train a category-level
+                        pose estimator without requiring any pose annotations.</p>
+                </div>
+            </div>
+
+            <!-- Publication 3: Semantic Flow -->
+            <div class="pub-item">
+                <div class="pub-thumb">
+                    <img src="images/semantic_flow_teaser.png" alt="Semantic Flow teaser">
+                </div>
+                <div class="pub-info">
+                    <a href=""><span class="pub-title">Semantic Flow: Learning Semantic Fields of Dynamic Scenes from
+                            Monocular Videos</span></a>
+                    <div class="pub-authors">
+                        <strong>Fengrui Tian</strong>,
+                        <a href="https://duanyueqi.github.io/">Yueqi Duan</a>,
+                        <a href="https://scholar.google.com/citations?user=YR7re-cAAAAJ&hl=zh-CN">Angtian Wang</a>,
+                        <a href="https://ventusff.github.io/">Jianfei Guo</a>,
+                        <a href="https://gr.xjtu.edu.cn/en/web/dushaoyi/home">Shaoyi Du</a>
+                    </div>
+                    <div class="pub-venue"><em>ICLR</em>, 2024</div>
+                    <div class="pub-links">
+                        <a href="https://openreview.net/forum?id=A2mRcRyGdl">open review</a> &nbsp;/&nbsp;
+                        <a href="https://arxiv.org/abs/2404.05163">arxiv</a> &nbsp;/&nbsp;
+                        <a href="https://github.com/tianfr/Semantic-Flow">code</a> &nbsp;/&nbsp;
+                        <a href="data/iclr24SemanticFlow.txt">bibtex</a>
+                    </div>
+                    <p class="pub-desc">We propose Semantic Flow that builds semantic fields of dynamic scenes from
+                        monocular videos.</p>
+                </div>
+            </div>
+
+            <!-- Publication 4: MonoNeRF -->
+            <div class="pub-item">
+                <div class="pub-thumb">
+                    <img src="images/mononerf_teaser.png" alt="MonoNeRF teaser">
+                </div>
+                <div class="pub-info">
+                    <a href="paper/Tian_MonoNeRF_arxiv.pdf"><span class="pub-title">MonoNeRF: Learning a Generalizable
+                            Dynamic Radiance Field from Monocular Videos</span></a>
+                    <div class="pub-authors">
+                        <strong>Fengrui Tian</strong>,
+                        <a href="https://gr.xjtu.edu.cn/en/web/dushaoyi/home">Shaoyi Du</a>,
+                        <a href="https://duanyueqi.github.io/">Yueqi Duan</a>
+                    </div>
+                    <div class="pub-venue"><em>ICCV</em>, 2023</div>
+                    <div class="pub-links">
+                        <a href="paper/Tian_MonoNeRF_arxiv.pdf">pdf</a> &nbsp;/&nbsp;
+                        <a href="https://arxiv.org/abs/2212.13056">arxiv</a> &nbsp;/&nbsp;
+                        <a href="data/iccv23_MonoNeRF_poster.pdf">poster</a> &nbsp;/&nbsp;
+                        <a href="https://github.com/tianfr/MonoNeRF">code</a> &nbsp;/&nbsp;
+                        <a href="https://www.youtube.com/watch?v=A6O4Q3PZZ18">youtube video</a> &nbsp;/&nbsp;
+                        <a
+                            href="https://livejohnshopkins-my.sharepoint.com/:v:/g/personal/zzhou82_jh_edu/ERr1M3Ze8kFNn85fCdIOEC4BZgu8AOWavzqBSJ2ywTD67A?e=zVChTK">talk
+                            at CCVL</a> &nbsp;/&nbsp;
+                        <a href="data/iccv23MonoNeRF.txt">bibtex</a>
+                    </div>
+                    <p class="pub-desc">We propose MonoNeRF for learning a generalizable dynamic radiance field from
+                        monocular videos. While independently using 2D local features and optical flows suffers from
+                        ambiguity along the ray direction, they provide complementary constraints to jointly learn 3D
+                        point features and scene flows.</p>
+                </div>
+            </div>
+
+            <!-- Publication 5: TCVM -->
+            <div class="pub-item">
+                <div class="pub-thumb">
+                    <img src="images/tcvm_overview.jpg" alt="TCVM overview">
+                </div>
+                <div class="pub-info">
+                    <a
+                        href="https://openaccess.thecvf.com/content/ACCV2022/html/Tian_TCVM_Temporal_Contrasting_Video_Montage_Framework_for_Self-supervised_Video_Representation_ACCV_2022_paper.html"><span
+                            class="pub-title">TCVM: Temporal Contrasting Video Montage Framework for Self-supervised
+                            Video Representation Learning</span></a>
+                    <div class="pub-authors">
+                        <strong>Fengrui Tian</strong>,
+                        Jiawei Fan,
+                        Xie Yu,
+                        <a href="https://gr.xjtu.edu.cn/en/web/dushaoyi/home">Shaoyi Du</a>,
+                        Meina Song,
+                        Yu Zhao
+                    </div>
+                    <div class="pub-venue"><em>ACCV</em>, 2022 &nbsp; <span style="color: red;">(Oral Presentation,
+                            <strong>Best Paper Award Honorable Mention</strong>)</span></div>
+                    <div class="pub-links">
+                        <a
+                            href="paper/Tian_TCVM_Temporal_Contrasting_Video_Montage_Framework_for_Self-supervised_Video_Representation_ACCV_2022_paper.pdf">pdf</a>
+                        &nbsp;/&nbsp;
+                        <a href="data/accv22TCVM.txt">bibtex</a>
+                    </div>
+                    <p class="pub-desc">We propose a framework for self-supervised video contrastive learning.</p>
+                </div>
+            </div>
+
+            <!-- Publication 6: Surface-GCN -->
+            <div class="pub-item">
+                <div class="pub-thumb">
+                    <img src="images/surfacegcn.jpg" alt="Surface-GCN overview">
+                </div>
+                <div class="pub-info">
+                    <a href="https://aapm.onlinelibrary.wiley.com/doi/abs/10.1002/mp.16280"><span
+                            class="pub-title">Surface-GCN: Learning Interaction Experience for Organ Segmentation in 3D
+                            Medical Images</span></a>
+                    <div class="pub-authors">
+                        <strong>Fengrui Tian</strong>,
+                        <a href="https://gr.xjtu.edu.cn/en/web/zhiqiangtian/home">Zhiqiang Tian</a>,
+                        Zhang Chen,
+                        Dong Zhang,
+                        <a href="https://gr.xjtu.edu.cn/en/web/dushaoyi/home">Shaoyi Du</a>
+                    </div>
+                    <div class="pub-venue"><em><a href="https://aapm.onlinelibrary.wiley.com/journal/24734209">Medical
+                                Physics</a></em>, 2023 &nbsp; (IF: 4.071)</div>
+                    <div class="pub-links">
+                        <a
+                            href="https://onlinelibrary.wiley.com/share/author/WQ4CIMTNAPDTNDRKVFJK?target=10.1002/mp.16280">paper</a>
+                        &nbsp;/&nbsp;
+                        <a href="paper/Tian_Surface-GCN_MP_2023_preprint.pdf">pdf</a> &nbsp;/&nbsp;
+                        <a href="paper/Tian_Surface-GCN_MP_2023_supplementary_material.pdf">supplementary material</a>
+                        &nbsp;/&nbsp;
+                        <a href="data/mp23Surface-GCN.txt">bibtex</a>
+                    </div>
+                    <p class="pub-desc">We propose a framework for learning radiologists' experience in medical organ
+                        segmentation.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ===== ACADEMIC SERVICES ===== -->
+        <h2 class="section-heading">Academic Services</h2>
+
+        <div class="list-section">
+            <div class="sub-heading">Conference Reviewer</div>
+            <ul>
+                <li>IEEE / CVF Computer Vision and Pattern Recognition Conference (CVPR) <a
+                        href="https://cvpr2023.thecvf.com/Conferences/2023">2023</a>, <a
+                        href="https://cvpr.thecvf.com/Conferences/2024">2024</a>, <a
+                        href="https://cvpr.thecvf.com/Conferences/2025">2025</a>, <a
+                        href="https://cvpr.thecvf.com/Conferences/2026">2026</a></li>
+                <li>IEEE / CVF International Conference on Computer Vision (ICCV) <a
+                        href="https://iccv.thecvf.com/Conferences/2025">2025</a></li>
+                <li>ACM Multimedia (ACM MM) <a href="https://2024.acmmm.org/">2024</a>, <a
+                        href="https://acmmm2025.org/">2025</a></li>
+                <li>Neural Information Processing Systems (NIPS) <a href="https://neurips.cc/Conferences/2024">2024</a>,
+                    <a href="https://neurips.cc/Conferences/2025">2025</a>
+                </li>
+                <li>International Conference on Learning Representations (ICLR) <a
+                        href="https://iclr.cc/Conferences/2025">2025</a>, <a
+                        href="https://iclr.cc/Conferences/2025">2026</a></li>
+                <li>International Conference on Machine Learning (ICML) <a
+                        href="https://icml.cc/Conferences/2025">2025</a></li>
+                <li>The IEEE/CVF Winter Conference on Applications of Computer Vision (WACV) <a
+                        href="https://wacv.thecvf.com/">2026</a></li>
+                <li>IEEE International Conference on Multimedia &amp; Expo (ICME) <a
+                        href="https://2025.ieeeicme.org/">2025</a></li>
+                <li>Chinese Conference on Pattern Recognition and Computer Vision (PRCV) <a
+                        href="http://www.prcv.cn/">2024</a>, <a href="http://www.prcv.cn/">2025</a></li>
+                <li>International Conference on Artificial Intelligence and Statistics (AISTATS) <a
+                        href="https://aistats.org/aistats2025/">2025</a>, <a
+                        href="https://aistats.org/aistats2026/">2026</a></li>
+            </ul>
+
+            <div class="sub-heading">Journal Reviewer</div>
+            <ul>
+                <li><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=76">IEEE Transactions on Circuits
+                        and Systems for Video Technology (TCSVT)</a></li>
+                <li><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=2945">IEEE Transactions on
+                        Visualization and Computer Graphics (TVCG)</a></li>
+                <li><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=6046">IEEE Transactions on
+                        Multimedia (TMM)</a></li>
+                <li><a href="https://dl.acm.org/journal/tog">ACM Transactions on Graphics (ToG)</a></li>
+                <li><a href="https://link.springer.com/journal/11263">International Journal of Computer Vision
+                        (IJCV)</a></li>
+            </ul>
+        </div>
+
+        <!-- ===== HONORS ===== -->
+        <h2 class="section-heading">Honors</h2>
+
+        <div class="list-section">
+            <ul>
+                <li><strong>ACCV Best Paper Award Honorable Mention (2/278)</strong>,&nbsp; 2022</li>
+                <li>Top 15 Postgraduates Honorable Mention, Xi'an Jiaotong University <strong>(Top 0.1%)</strong>,&nbsp;
+                    2023</li>
+                <li>National Scholarship, Xi'an Jiaotong University <strong>(Top 0.1%)</strong>,&nbsp; 2023</li>
+                <li>Xiaomi Special Scholarship, Xiaomi Corp. <strong>(Top 0.1%)</strong>,&nbsp; 2023</li>
+                <li>Special Scholarship, Xi'an Jiaotong University (Top 10%),&nbsp; 2022</li>
+                <li>Best Bachelor's Thesis, Xi'an Jiaotong University (ranking 1/110+),&nbsp; 2021</li>
+                <li>Best Master's Thesis, Xi'an Jiaotong University (ranking 1/107+),&nbsp; 2024</li>
+            </ul>
+        </div>
+
+        <!-- ===== MISC ===== -->
+        <h2 class="section-heading">Misc</h2>
+
+        <div class="list-section">
+            <p>I am a <strong>badminton player</strong>. I played badminton at UPenn, XJTU, Tsinghua University,
+                SenseTime Corp., and JHU.</p>
+            <p>Here are several awards I have won:</p>
+            <ul>
+                <li>Quarter Final of Badminton Men's Single Contest, SenseTime Corp.&nbsp; 2023</li>
+                <li>Semi Final of Freshman Cup Badminton, Faculty of Electronic and Information Engineering, XJTU,&nbsp;
+                    2022</li>
+            </ul>
+            <p>Don't hesitate to <a href="mailto:tianfr1999@gmail.com">contact me</a> if you want to play badminton with
+                me!</p>
+            <br>
+            <p>I spent a wonderful time on the <strong>Model United Nations</strong> activities with my closest friends
+                during my undergraduate study.
+                I appreciate and never forget those memories.</p>
+        </div>
+
+        <!-- ===== VISITOR MAP ===== -->
+        <div class="visitor-map">
+            <script type='text/javascript' id='clustrmaps'
+                src='//cdn.clustrmaps.com/map_v2.js?cl=080808&w=300&t=tt&d=WXVqg2kYGsIY5G4MjqSGNYKVJI2nQs-7CMQylmE1UG8&co=ffffff&ct=808080&cmo=3acc3a&cmn=ff5353'></script>
+        </div>
+
+        <!-- ===== FOOTER ===== -->
+        <div class="footer">
+            <p>Last update: <span id="last-update">loading...</span>. The website template was borrowed from the <a
+                    href="https://github.com/jonbarron/website">source code</a> and <a
+                    href="https://jonbarron.info/">this page</a>.</p>
+        </div>
+        <script>
+            (function () {
+                var el = document.getElementById('last-update');
+                fetch('https://api.github.com/repos/tianfr/tianfr.github.io/commits?per_page=1')
+                    .then(function (r) { return r.json(); })
+                    .then(function (data) {
+                        if (data && data[0] && data[0].commit && data[0].commit.committer) {
+                            var d = new Date(data[0].commit.committer.date);
+                            var mm = ('0' + (d.getMonth() + 1)).slice(-2);
+                            var dd = ('0' + d.getDate()).slice(-2);
+                            el.textContent = mm + '/' + dd + '/' + d.getFullYear();
+                        } else {
+                            el.textContent = '09/16/2025';
+                        }
+                    })
+                    .catch(function () {
+                        el.textContent = '09/16/2025';
+                    });
+            })();
+        </script>
+
+    </div>
 </body>
 
 </html>
