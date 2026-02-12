@@ -781,21 +781,27 @@
         <script>
             (function () {
                 var el = document.getElementById('last-update');
-                fetch('https://api.github.com/repos/tianfr/tianfr.github.io/commits?per_page=1')
-                    .then(function (r) { return r.json(); })
-                    .then(function (data) {
-                        if (data && data[0] && data[0].commit && data[0].commit.committer) {
-                            var d = new Date(data[0].commit.committer.date);
-                            var mm = ('0' + (d.getMonth() + 1)).slice(-2);
-                            var dd = ('0' + d.getDate()).slice(-2);
-                            el.textContent = mm + '/' + dd + '/' + d.getFullYear();
-                        } else {
-                            el.textContent = '09/16/2025';
-                        }
-                    })
-                    .catch(function () {
-                        el.textContent = '09/16/2025';
-                    });
+                var fallback = function () {
+                    var d = new Date(document.lastModified);
+                    var mm = ('0' + (d.getMonth() + 1)).slice(-2);
+                    var dd = ('0' + d.getDate()).slice(-2);
+                    el.textContent = mm + '/' + dd + '/' + d.getFullYear();
+                };
+                try {
+                    var controller = new AbortController();
+                    var timer = setTimeout(function () { controller.abort(); }, 3000);
+                    fetch('https://api.github.com/repos/tianfr/tianfr.github.io/commits?per_page=1', { signal: controller.signal })
+                        .then(function (r) { clearTimeout(timer); return r.json(); })
+                        .then(function (data) {
+                            if (data && data[0] && data[0].commit && data[0].commit.committer) {
+                                var d = new Date(data[0].commit.committer.date);
+                                var mm = ('0' + (d.getMonth() + 1)).slice(-2);
+                                var dd = ('0' + d.getDate()).slice(-2);
+                                el.textContent = mm + '/' + dd + '/' + d.getFullYear();
+                            } else { fallback(); }
+                        })
+                        .catch(fallback);
+                } catch (e) { fallback(); }
             })();
         </script>
 
