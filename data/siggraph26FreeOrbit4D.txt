@@ -1,0 +1,6 @@
+@InProceedings{cao2026freeorbit4d,
+  title={{FreeOrbit4D}: Training-Free Arbitrary Camera Redirection for Monocular Videos via Geometry-Complete 4D Reconstruction},
+  author={Cao, Wei and Zhang, Hao and Tian, Fengrui and Wu, Yulun and Li, Yingying and Wang, Shenlong and Yu, Ning and Liu, Yaoyao},
+  booktitle={Special Interest Group on Computer Graphics and Interactive Techniques Conference (SIGGRAPH)},
+  year={2026}
+}
