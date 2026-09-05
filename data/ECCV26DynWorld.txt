@@ -1,0 +1,7 @@
+@InProceedings{25iccv/tian_dynworld,
+    author    = {Tian, Fengrui and Luo, Jinqi and Tadiaptri, Uday Kiran Reddy and Min, Hancheng and Vidal, Rene},
+    title     = {Dynamic World Generation Made Efficient},
+    booktitle = {European Conference on Computer Vision (ECCV)},
+    month     = {September},
+    year      = {2026}
+}

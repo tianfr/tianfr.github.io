@@ -221,6 +221,12 @@
             display: block;
         }
 
+        .pub-thumb video.dynworld-teaser {
+            aspect-ratio: 22 / 13;
+            object-fit: cover;
+            object-position: center;
+        }
+
         .pub-info {
             flex: 1;
             min-width: 0;
@@ -520,6 +526,33 @@
         <h2 class="section-heading">Selected Publications</h2>
 
         <div class="publication-list">
+            <!-- Publication 1: DynamicVoyager -->
+            <div class="pub-item">
+                <div class="pub-thumb">
+                    <video class="dynworld-teaser" autoplay muted loop playsinline aria-label="DynamicWorld teaser">
+                        <source src="images/dynworld_teaser.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="pub-info">
+                    <a href=""><span class="pub-title">Dynamic World Generation Made Efficient</span></a>
+                    <div class="pub-authors">
+                        <strong>Fengrui Tian</strong>,
+                        <a href="https://peterljq.github.io/">Jinqi Luo</a>,
+                        <a href="https://scholar.google.com/citations?user=_D9ydAUAAAAJ&hl=en">Uday Kiran Reddy Tadipatri</a>,
+                        <a href="https://hanchmin.github.io/">Hancheng Min</a>,
+                        <a href="http://vision.jhu.edu/rvidal.html">Ren&eacute; Vidal</a>
+                    </div>
+                    <div class="pub-venue"><em>ECCV</em>, 2026</div>
+                    <div class="pub-links">
+                        <!-- <a href="">arxiv</a> &nbsp;/&nbsp; -->
+                        <a href="paper/Tian_DynWorld_ECCV_2026.pdf">paper</a> &nbsp;/&nbsp;
+                        <!-- <a href="https://tianfr.github.io/project/DynamicVoyager/index.html">website</a> &nbsp;/&nbsp; -->
+                        <!-- <a href="https://github.com/tianfr/DynamicVoyager">code</a> &nbsp;/&nbsp; -->
+                        <a href="https://www.youtube.com/watch?v=mN1dBLRdrMc">video</a> &nbsp;/&nbsp;
+                        <a href="data/ECCV26DynWorld.txt">bibtex</a>
+                    </div>
+                </div>
+            </div>
 
             <!-- Publication 1: DynamicVoyager -->
             <div class="pub-item">
